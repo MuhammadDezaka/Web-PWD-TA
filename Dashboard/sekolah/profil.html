@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Profil Sekolah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" id="toggle-btn">
+            <i class="fas fa-bars"></i>
+            <span class="text"> Menu</span>
+        </button>
+
+        <a href="dashboard_user.html">
+            <i class="fas fa-box icon"></i>
+            <span class="text">Dashboard</span>
+        </a>
+        <a href="profil.html">
+            <i class="fas fa-school icon"></i>
+            <span class="text">Profil Sekolah</span>
+        </a>
+        <a href="pendidik_user.html">
+            <i class="fas fa-user-tie icon"></i>
+            <span class="text">Pendidik</span>
+        </a>
+        <a href="tenaga_pendidik_user.html">
+            <i class="fas fa-users-cog icon"></i>
+            <span class="text">Tenaga Pendidik</span>
+        </a>
+        <a href="peserta_didik_user.html">
+            <i class="fas fa-user-graduate icon"></i>
+            <span class="text">Peserta Didik</span>
+        </a>
+        <a href="program_user.html">
+            <i class="fas fa-project-diagram icon"></i>
+            <span class="text">Program</span>
+        </a>
+        <a href="komptensi_user.html">
+            <i class="fas fa-cogs icon"></i>
+            <span class="text">Kompetensi</span>
+        </a>
+    </div>
+
+    <div class="content" id="content">
+        <!-- Header -->
+        <h2 class="mb-4 text-center">Profil Sekolah</h2>
+
+        <!-- Profil Card -->
+        <div class="card shadow p-4">
+            <div class="row align-items-center">
+                <!-- Logo Sekolah -->
+                <div class="col-md-3 text-center logo-container">
+                    <img src="https://via.placeholder.com/150" alt="Logo Sekolah" id="schoolLogo">
+                </div>
+                <!-- Informasi Sekolah -->
+                <div class="col-md-6">
+                    <h4 id="schoolName">SMK Negeri Contoh</h4>
+                    <p><strong>NPSN:</strong> <span id="schoolNPSN">12345678</span></p>
+                    <p><strong>Alamat:</strong> <span id="schoolAddress">Jl. Contoh No. 1, Kota Contoh</span></p>
+                    <p><strong>Email:</strong> <span id="schoolEmail">contoh@smk.sch.id</span></p>
+                    <p><strong>Telepon:</strong> <span id="schoolPhone">081234567890</span></p>
+                </div>
+                <!-- Tombol Edit -->
+                <div class="col-md-3 text-center">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+                        <i class="fas fa-edit"></i> Edit Profil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit Profil -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Profil Sekolah</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <div class="mb-3">
+                            <label for="editLogo" class="form-label">Logo Sekolah</label>
+                            <input type="file" class="form-control" id="editLogo" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editName" class="form-label">Nama Sekolah</label>
+                            <input type="text" class="form-control" id="editName" value="SMK Negeri Contoh">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editNPSN" class="form-label">NPSN</label>
+                            <input type="text" class="form-control" id="editNPSN" value="12345678">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editAddress" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" id="editAddress" value="Jl. Contoh No. 1, Kota Contoh">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmail" value="contoh@smk.sch.id">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPhone" class="form-label">Telepon</label>
+                            <input type="text" class="form-control" id="editPhone" value="081234567890">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" id="saveChanges">Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Edit Profil -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Profil Sekolah</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <div class="mb-3">
+                            <label for="editLogo" class="form-label">Logo Sekolah</label>
+                            <input type="file" class="form-control" id="editLogo" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editName" class="form-label">Nama Sekolah</label>
+                            <input type="text" class="form-control" id="editName" value="SMK Negeri Contoh">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editNPSN" class="form-label">NPSN</label>
+                            <input type="text" class="form-control" id="editNPSN" value="12345678">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editAddress" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" id="editAddress" value="Jl. Contoh No. 1, Kota Contoh">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmail" value="contoh@smk.sch.id">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPhone" class="form-label">Telepon</label>
+                            <input type="text" class="form-control" id="editPhone" value="081234567890">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" id="saveChanges">Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggle-btn');
+        const content = document.getElementById('content');
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            content.classList.toggle('collapsed');
+            icon.classList.toggle('fa-chevron-right');
+        });
+    </script>
+</body>
+</html>

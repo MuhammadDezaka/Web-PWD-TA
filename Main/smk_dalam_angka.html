@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Dalam Angka</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DIBA PeSMKa</div>
+        <ul>
+            <li><a href="index.html">BERANDA</a></li>
+            <li><a href="smk_dalam_angka.html">SMK DALAM ANGKA</a></li>
+            <li><a href="dokumen.html">DOKUMEN</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>SMK DALAM ANGKA</h2>
+        <p>Data dan statistik SMK dalam berbagai kategori dan indikator.</p>
+    </section>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+        <canvas id="smkChart"></canvas>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 DIBA PeSMKa - Dinas Pendidikan Provinsi Bangka Belitung</p>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('smkChart').getContext('2d');
+        const smkChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Peserta Didik', 'Pendidik', 'Tenaga Pendidikan'],
+                datasets: [{
+                    label: 'Jumlah Data SMK',
+                    data: [1200, 85, 40], // Ubah angka sesuai dengan data asli
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(75, 192, 192, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupa Password</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('../image/bangka.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .reset-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .reset-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .reset-container label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #555;
+        }
+
+        .reset-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .reset-container button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .reset-container button:hover {
+            background: #45A049;
+        }
+
+        .reset-container a {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .reset-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="reset-container">
+        <h1>Lupa Password</h1>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukan Email" required>
+
+            <button type="submit">Verifikasi</button>
+        </form>
+    </div>
+</body>
+</html>

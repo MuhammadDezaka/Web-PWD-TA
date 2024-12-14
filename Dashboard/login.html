@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('../image/bangka.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-container label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #555;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background: #45A049;
+        }
+
+        .login-container a {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Selamat Datang!</h1>
+        <form id="loginForm">
+            <div class="error-message" id="error-message">NPSN atau Password tidak cocok. Silakan coba lagi.</div>
+            <div class="mb-3">
+                <label for="npsn" class="form-label">NPSN</label>
+                <input type="text" class="form-control" id="npsn" placeholder="Masukkan NPSN" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Masukkan Password" required>
+            </div>
+           
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Menangani login form
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Ambil nilai input NPSN dan Password
+            const npsn = document.getElementById('npsn').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Validasi input
+            if (npsn === '12345678' && password === 'admin') {
+                // Redirect ke dashboard_user.html
+                window.location.href = 'sekolah/dashboard_user.html';
+            } else if (npsn === 'admin' && password === '12345#') {
+                // Redirect ke dashboard.html
+                window.location.href = 'dashboard.html';
+            } else {
+                // Tampilkan alert jika salah
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

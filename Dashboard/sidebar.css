@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+}
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    transition: width 0.3s, padding 0.3s;
+    width: 250px;
+    position: fixed;
+    padding: 20px;
+}
+.sidebar.collapsed {
+    width: 60px;
+    padding: 20px 10px;
+}
+.sidebar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+.sidebar a .icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.sidebar.collapsed a .text {
+    display: none;
+}
+.sidebar.collapsed button .text {
+    display: none;
+}
+.sidebar h4 {
+    font-size: 18px;
+}
+.toggle-btn {
+    font-size: 18px;
+    padding: 8px;
+    transition: transform 0.3s;
+    border: none;
+    background-color: #f8f9fa;
+}
+.sidebar.collapsed .toggle-btn {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content-wrapper {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s, width 0.3s;
+}
+.content-wrapper.collapsed {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+}
+.content {
+    padding: 20px;
+}
+.table-container {
+    overflow-x: auto; /* Membuat tabel bisa digeser jika terlalu besar */
+}
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+.table .total-row {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}

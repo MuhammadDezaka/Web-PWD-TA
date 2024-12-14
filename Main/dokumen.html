@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program SMK</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+         /* Table */
+        .table-container {
+            margin: 20px auto;
+            width: 90%;
+            border-collapse: collapse;
+        }
+        table {
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        table th {
+            background-color: #004080;
+            color: white;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Button */
+        .btn-download {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-download:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DIBA PeSMKa</div>
+        <ul>
+            <li><a href="index.html">BERANDA</a></li>
+            <li><a href="smk_dalam_angka.html">SMK DALAM ANGKA</a></li>
+            <li><a href="dokumen.html">DOKUMEN</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Dokumen</h2>
+        <p>Berbagai program unggulan dan inovasi di SMK.</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama File</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Program SMK 2024</td>
+                        <td><a href="dokumen/program-smk-2024.pdf" class="btn-download" download>Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Data Statistik SMK</td>
+                        <td><a href="dokumen/data-statistik-smk.xlsx" class="btn-download" download>Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pedoman Kurikulum</td>
+                        <td><a href="dokumen/pedoman-kurikulum.pdf" class="btn-download" download>Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 DIBA PeSMKa - Dinas Pendidikan Provinsi Bangka Belitung</p>
+    </footer>
+</body>
+</html>

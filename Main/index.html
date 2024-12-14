@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Publik</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #198754;
+            display: flex;
+            
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            border-bottom: 2px solid #198754;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Section Selamat Datang */
+        .welcome-section {
+            text-align: center;
+            background: linear-gradient(135deg, #0f4c81, #68c0de);
+            color: #fff;
+            padding: 50px 20px;
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Artikel Section */
+        .artikel-section {
+            padding: 40px 20px;
+            background: #f9f9f9;
+        }
+
+        .artikel-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .artikel-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .artikel-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .artikel-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .artikel-card .content {
+            padding: 15px;
+        }
+
+        .artikel-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .artikel-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .artikel-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .artikel-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+         /* Footer */
+         .footer {
+            background: #198754;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            position: sticky;
+         /* Beri jarak antara konten dan footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">DIBA PeSMKa</div>
+        <ul>
+            <li><a href="index.html">BERANDA</a></li>
+            <li><a href="smk_dalam_angka.html">SMK DALAM ANGKA</a></li>
+            <li><a href="dokumen.html">DOKUMEN</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Section Selamat Datang -->
+    <section class="welcome-section">
+        <h1>SELAMAT DATANG DI PORTAL INFORMASI</h1>
+        <p><strong>DIBA PeSMKa DINAS PENDIDIKAN</strong> PROVINSI Bangka Belitung</p>
+    </section>
+
+    <!-- Section Artikel -->
+    <section class="artikel-section">
+        <h2 class="artikel-title">Klik PeSMKa</h2>
+        <div class="artikel-container">
+            <!-- Card 1 -->
+            <div class="artikel-card">
+                <img src="../image/news.jpg" alt="Artikel 1">
+                <div class="content">
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </h3>
+                    <p>Muhammad Dezaka</p>
+                    <!-- <a href="#">Baca Selengkapnya</a> -->
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="artikel-card">
+                <img src="../image/news.jpg" alt="Artikel 2">
+                <div class="content">
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </h3>
+                    <p>Muhammad Dezaka</p>
+                    <!-- <a href="#">Baca Selengkapnya</a> -->
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="artikel-card">
+                <img src="../image/news.jpg" alt="Artikel 3">
+                <div class="content">
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </h3>
+                    <p>Evan Mahesa</p>
+                    <!-- <a href="#">Baca Selengkapnya</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 DIBA PeSMKa - Dinas Pendidikan Provinsi Bangka Belitung</p>
+    </footer>
+</body>
+</html>
